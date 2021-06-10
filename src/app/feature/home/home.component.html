@@ -1,0 +1,18 @@
+<button class="my-bookmarks" (click)="goToBookmark()"></button>
+<div>
+  <input type="text" class="search-input" (keyup.enter)="goSearch()" [(ngModel)]="inputSearch"
+         >
+</div>
+<div class="d-flex justify-content-center align-items-center flex-column" style="width: 600px">
+  <div *ngFor="let item of results"  >
+    <div class="d-flex flex-row justify-content-between ">
+      <div><span>{{item.repoName}}</span></div>
+      <div style="width:50px"><img  style="width: 100%"[src]="item.repoAvatar" alt=""></div>
+      <button (click)="bookmarkResult(item)">bookmark</button>
+
+    </div>
+
+
+  </div>
+</div>
+
