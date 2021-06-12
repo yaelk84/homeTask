@@ -18,18 +18,7 @@ const routes: Routes = [
     loadChildren: () => import('./feature/bookmark/bookmark.module').then(m => m.BookmarkModule)
   }
 ];
-export function initializeApp(apiService: ApiService) {
-  return (): Observable<any> => {
-    console.log("gg")
-    return apiService.login({name:"6", password:"4"}).pipe(
-      mergeMap((token:string) => {
-        debugger
-        localStorage.setItem(CONSTANTS.TOKEN, token);
-        return of(JSON.parse('true'))
-      }));
-  }
 
-}
 
 @NgModule({
   declarations: [
@@ -42,9 +31,7 @@ export function initializeApp(apiService: ApiService) {
     RouterModule.forRoot(routes)
 
   ],
-  providers: [{provide: APP_INITIALIZER, useFactory: initializeApp, deps: [
-      ApiService],
-    multi: true}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

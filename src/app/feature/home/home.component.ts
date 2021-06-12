@@ -28,8 +28,12 @@ export class HomeComponent implements OnInit {
   public goToBookmark(){
     this.router.navigate([CONSTANTS.ROUTES.BOOKMARK], );
   }
-  public goSearch():void{
-    const param =this.inputSearch;
+  public goSearch(): void{
+    const param = this.inputSearch;
+    if (!param || !param.length) {
+      return;
+    }
+
     this.homeService.githubSearch(param).pipe(
       finalize(() => {
 
