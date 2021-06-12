@@ -13,7 +13,7 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  public results:IResult[];
+  public results: IResult[];
   public inputSearch:string = '';
 
   constructor(private  homeService: HomeService, private router: Router) { }

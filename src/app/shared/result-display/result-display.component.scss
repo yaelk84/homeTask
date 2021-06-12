@@ -1,0 +1,18 @@
+.results-wrapper{
+  font-size: 18px;
+  width: 600px;
+  flex-wrap: wrap;
+  .result{
+    width: 50%;
+    margin-top: 20px;
+    .img-wrapper{
+      border-radius: 5px;
+      width: 80px;
+      border: 2px solid black;
+    }
+    button{
+      background-color: aliceblue;
+      margin-top: 10px;
+    }
+  }
+}
