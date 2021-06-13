@@ -4,7 +4,7 @@ import {finalize} from 'rxjs/operators';
 import {HomeService} from './home.service';
 import {IResult} from '../../models/model';
 import {CONSTANTS} from '../../constants';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -22,13 +22,14 @@ export class HomeComponent implements OnInit {
 
 
   }
-  public bookmarkResult(item: IResult): void{
+  public bookmarkResult(item: IResult): void {
     this.homeService.addToBookMark(item);
   }
-  public goToBookmark(){
+  public goToBookmark(): void{
     this.router.navigate([CONSTANTS.ROUTES.BOOKMARK], );
   }
   public goSearch(): void{
+    // dont fire if search empty
     const param = this.inputSearch;
     if (!param || !param.length) {
       return;

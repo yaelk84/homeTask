@@ -18,11 +18,11 @@ export class AppInitService {
 
     public Init(): Observable<any> {
 
-      return this.apiService.login({name:"6", password:"4"}).pipe(
+      return this.apiService.login({name:"yael", password:"4555"}).pipe(
       mergeMap((token:string) => {
 
         localStorage.setItem(CONSTANTS.TOKEN, token);
-        return of(JSON.parse('true'))
+        return of(JSON.parse('true'));
         }));
 
 

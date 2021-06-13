@@ -18,7 +18,7 @@ export class ApiService {
 
     return this.http.get(`https://api.github.com/search/repositories?q=${searchKeyWord}`).pipe(
       mergeMap((response: { items: [] }) => {
-        return of(response.items)
+        return of(response.items);
       })
     );
   }
@@ -32,6 +32,7 @@ export class ApiService {
     );
   }
 
+  // this function warp every http call and add the token to headers
   private apiWrapper(httpType: string, url: string, params = {}): Observable<any> {
     const token = localStorage.getItem(CONSTANTS.TOKEN);
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {IResult} from "../../models/model";
-import {CONSTANTS} from "../../constants";
-import {json} from "@angular-devkit/core";
+import {IResult} from '../../models/model';
+import {CONSTANTS} from '../../constants';
+
 
 @Component({
   selector: 'app-bookmark',
@@ -10,12 +10,12 @@ import {json} from "@angular-devkit/core";
 })
 export class BookmarkComponent implements OnInit {
 
-  public bookmarkssResults:IResult[];
+  public bookmarksResults: IResult[];
   constructor() { }
 
   ngOnInit() {
-    this.bookmarkssResults = JSON.parse(localStorage.getItem(CONSTANTS.BOOKMARKS))  as IResult[];
-    console.log("book", this.bookmarkssResults )
+    this.bookmarksResults = JSON.parse(localStorage.getItem(CONSTANTS.BOOKMARKS))  as IResult[];
+
   }
 
 }

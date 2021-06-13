@@ -12,13 +12,13 @@ export class AppComponent implements OnInit {
 
   title = 'github';
   isLogin = false
-  constructor(private appInitService: AppInitService){}
+  constructor(private appInitService: AppInitService) {}
   ngOnInit(): void {
-    console.log("init")
-    this.appInitService.Init().subscribe((isLogin)=>{
+
+    this.appInitService.Init().subscribe((isLogin) =>{
 
       this.isLogin = isLogin;
-    })
+    });
 
   }
 }
