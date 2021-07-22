@@ -5,9 +5,9 @@ import {HttpClient} from '@angular/common/http';
 import {IHttpType, IUser} from '../models/model';
 import {CONSTANTS} from '../constants';
 
-@Injectable({
+/*@Injectable({
   providedIn: 'root'
-})
+})*/
 export class ApiService {
 
 

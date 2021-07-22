@@ -5,25 +5,22 @@ import {HttpClient} from '@angular/common/http';
 import {IHttpType, IResult, IServerDataItem, IUser} from '../models/model';
 import {CONSTANTS} from '../constants';
 import {ApiService} from './api.service';
+import {TranslateService} from "./translate.service";
 
-@Injectable({
+/*@Injectable({
   providedIn: 'root'
-})
+})*/
 export class AppInitService {
 
 
-  constructor(private apiService: ApiService) {
+  constructor(private translateService: TranslateService) {
   }
 
 
-    public Init(): Observable<any> {
+    public Init(): Observable<boolean> {
 
-      return this.apiService.login({name:"yael", password:"4555"}).pipe(
-      mergeMap((token:string) => {
+      return this.translateService.loadTranslate();
 
-        localStorage.setItem(CONSTANTS.TOKEN, token);
-        return of(JSON.parse('true'));
-        }));
 
 
 

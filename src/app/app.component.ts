@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AppInitService} from './services/api.init';
+import {finalize} from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -11,14 +12,15 @@ import {AppInitService} from './services/api.init';
 export class AppComponent implements OnInit {
 
   title = 'github';
-  isLogin = false
-  constructor(private appInitService: AppInitService) {}
+  appFinishedLoaded = false;
+
+  constructor(private appInitService: AppInitService) {
+  }
+
   ngOnInit(): void {
 
-    this.appInitService.Init().subscribe((isLogin) =>{
+    this.appInitService.Init().pipe(finalize(() => this.appFinishedLoaded = true)).subscribe();
 
-      this.isLogin = isLogin;
-    });
 
   }
 }
