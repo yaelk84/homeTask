@@ -5,6 +5,8 @@ import {HomeService} from './home.service';
 import {IResult} from '../../models/model';
 import {CONSTANTS} from '../../constants';
 import {Router} from '@angular/router';
+import {DropdownItem} from "../../shared/components/dropdown/dropdown.component";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,15 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   public results: IResult[];
-  public inputSearch:string = '';
+  public inputSearch :string = '';
+  public dropdownCtrl: FormControl = new FormControl();
+  public dropdownItems: DropdownItem[] = [
+    new DropdownItem(1, 'option-1'),
+    new DropdownItem(2, 'option-2'),
+    new DropdownItem(3, 'option-3'),
+    new DropdownItem(4, 'option-4'),
+  ];
+
 
   constructor(private  homeService: HomeService, private router: Router) { }
 

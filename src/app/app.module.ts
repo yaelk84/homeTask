@@ -4,7 +4,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {ServicesModule} from "./services/services.module";
+import {ServicesModule} from './services/services.module';
 
 
 

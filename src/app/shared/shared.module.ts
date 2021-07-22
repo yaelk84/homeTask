@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ResultDisplayComponent} from './result-display/result-display.component';
 import {TranslatePipe} from './pipe/translate.pipe';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
-  declarations: [ResultDisplayComponent, TranslatePipe],
+  declarations: [ResultDisplayComponent, TranslatePipe, DropdownComponent],
   exports: [
-    ResultDisplayComponent
+    ResultDisplayComponent,
+    DropdownComponent
   ],
   imports: [
     CommonModule
