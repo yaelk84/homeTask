@@ -1,41 +1,44 @@
-<div>{{label}}</div>
-<div class="amdocs-dropdown btn-group {{customClass}}" dropdown  #dropdown="bs-dropdown" >
+<div class="dropdown-input">
+  <div class="label-item">{{label}}</div>
+  <div class="dropdown btn-group input-item {{customClass}}" dropdown  #dropdown="bs-dropdown" >
 
-  <button dropdownToggle type="button"
-          class="custom-input-field-control dropdown-toggle d-flex align-items-center justify-content-between"
-          aria-controls="dropdown-basic"
-          [class.active]="control.value"
-          [class.invalid]="isInvalid()"
-          [class.readonly]="readOnly"
-          [attr.disabled]="isDisabled()"
-          (focus)="onFocus()"
-          (blur)="onBlur()"
+    <button dropdownToggle type="button"
+            class="custom-input-field-control dropdown-toggle d-flex align-items-center justify-content-center"
+            aria-controls="dropdown-basic"
+            [class.active]="control.value"
+            [class.invalid]="isInvalid()"
+            [class.readonly]="readOnly"
+            [attr.disabled]="isDisabled()"
+            (focus)="onFocus()"
+            (blur)="onBlur()"
 
-  >
-    <span class="selected-value" [ngClass]="{'placeholder': !control.value}">{{selectedValue}}</span>
+    >
+      <span class="selected-value" [ngClass]="{'placeholder': !control.value}">{{selectedValue}}</span>
 
-  </button>
+    </button>
 
 
-  <div  class="custom-input-field-error" *ngIf="false">
+    <div  class="custom-input-field-error" *ngIf="false">
 
-    <span class="text-small-normal">{{getErrorMsg()}}</span>
-  </div>
-  <ul *dropdownMenu class="dropdown-menu"
-      [ngClass]="{'full-width': fullWith}"
-      role="menu" aria-labelledby="button-basic">
+      <span class="text-small-normal">{{getErrorMsg()}}</span>
+    </div>
+    <ul *dropdownMenu class="dropdown-menu"
+        [ngClass]="{'full-width': fullWith}"
+        role="menu" aria-labelledby="button-basic">
 
-  <ng-container *ngFor="let item of items; let i = index" >
-      <li class="menu-item" role="menuitem" (click)="itemClick($event, item)">
-        <a class="dropdown-item"
-           [ngClass]="{'disabled': item.disabled, 'selected': item.key == control.value}"
-           href="javascript:void(0)"
-        >
+      <ng-container *ngFor="let item of items; let i = index" >
+        <li class="menu-item" role="menuitem" (click)="itemClick($event, item)">
+          <a class="dropdown-item"
+             [ngClass]="{'disabled': item.disabled, 'selected': item.key == control.value}"
+             href="javascript:void(0)"
+          >
             {{item.value}}
 
-        </a>
-      </li>
+          </a>
+        </li>
 
-    </ng-container>
-  </ul>
+      </ng-container>
+    </ul>
+  </div>
 </div>
+

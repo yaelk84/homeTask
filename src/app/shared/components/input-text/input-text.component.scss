@@ -1,0 +1,14 @@
+@import "~src/assets/scss/colors";
+
+.input-wrapper{
+  width: 100% !important;
+  input{
+    width: 100%;
+    width: 100% !important;
+    width: auto;
+    background-color: $gray1;
+    border: solid 0.5px $border;
+    border-radius: 3px;
+  }
+}
+

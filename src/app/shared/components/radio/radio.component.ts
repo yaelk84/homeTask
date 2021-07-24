@@ -12,6 +12,7 @@ export class RadioComponent implements OnInit {
   @Input() options: IRadio[] = [];
   @Input() control: FormControl;
   @Input() customClass: string;
+  @Input() withImageRadio = false;
   ngOnInit() {
   }
 

@@ -1,0 +1,68 @@
+@import "~src/assets/scss/colors";
+
+label {
+  flex-grow: 1;
+  margin: 0 5px;
+&.with-image{
+  margin-bottom: 10px;
+  flex-grow: unset;
+  flex: 0 0 23.6%;
+  max-width: 23.6%;
+&:nth-child(4n) {
+
+  margin-right: 0;
+}
+  &:nth-child(5n) {
+;
+    margin-left: 0;
+  }
+}
+  .custom-control-indicator {
+    color: $text;
+    display: flex;
+    background-color: $gray1;
+    border: solid 0.5px $border;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+
+
+    &.with-image{
+
+      background-color: transparent;
+      padding: 10px 0;
+      height: auto;
+      .icon{
+        &.hr{
+          height: 66px;
+          width: 33px;
+          background-image: url("/assets/images/hr.svg");
+        }
+        margin: 0;
+        margin-bottom: 15px;
+      }
+
+
+    }
+    &.selected {
+      background-color: $orange;
+      border: none;
+      color: $white;
+    }
+
+  }
+  &:last-child {
+
+      margin-right: 0;
+
+
+  }
+  &:first-child {
+
+      margin-left: 0;
+
+
+  }
+}

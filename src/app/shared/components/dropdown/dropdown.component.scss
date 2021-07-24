@@ -1,53 +1,58 @@
 @import "~src/assets/scss/colors";
+.dropdown-input{
 
-.amdropdown {
-  width: 100%;
-  display: block;
-  .custom-input-field-control {
-    .selected-value {
-      max-width: calc(100a - 25px);
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-  .dropdown-toggle {
+  .dropdown {
     width: 100%;
-    &:focus {
-      outline: none;
-    }
-    &:after{
-      content: none;
-    }
-  }
-  .dropdown-menu {
-    margin: 0;
-    padding: 16px 0px;
-    border-radius: 8px;
-    &.full-width {
+    display: block;
+
+
+
+    .dropdown-toggle {
+      position: relative;
       width: 100%;
-      .dropdown-item {
-        white-space: inherit;
+      height: 100%;
+      display: flex;
+      background-color: $gray1;
+
+      border: solid 0.5px $border;
+      border-radius: 3px;
+
+
+      &:after{
+        position: absolute;
+        right: 15px;
+        border-top: 0.5em solid;
+        border-right: 0.5em solid transparent;
+        border-bottom: 0;
+        border-left: 0.5em solid transparent;
       }
     }
-    li.menu-item {
-      cursor: pointer;
-      .dropdown-item {
-        margin: 0;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        border-bottom: $border 1px solid;
-        padding: 0 12px;
-        &.dropdown-sub-item{
-          padding-left: 25px;
-        }
-        &.selected, &:hover{
-          background-color: $gray1;
-          color: $white;
+    .dropdown-menu {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+
+
+      li.menu-item {
+        cursor: pointer;
+        .dropdown-item {
+          margin: 0;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          border-bottom: $border 1px solid;
+          padding: 0 12px;
+          &:last-child{
+            border-bottom-width: 0;
+          }
+          &.selected, &:hover{
+            background-color: $orange;
+            color: $white;
+          }
         }
       }
     }
   }
+
 }
 

@@ -1,11 +1,33 @@
 <div class="amdocs-form-radio {{customClass}}">
-
+<div class="d-flex flex-row " [ngClass]="{'flex-wrap':withImageRadio,'justify-content-between':!withImageRadio}">
   <ng-container *ngFor="let item of options">
-    <label class="container">
-      <span >{{item.desc}}</span>
+
+
+    <label [ngClass]="{'with-image':withImageRadio}" >
+      <ng-container  *ngTemplateOutlet="withImageRadio ? withImage : noImage; context: { $implicit: item }"></ng-container>
       <input class="hidden-input" type="radio"   [value]="item.id" [formControl]="control" (change)="onChange()">
-      <span class="custom-control-indicator" [ngClass]="{'selected': control.value === item.id}"></span>
+
     </label>
   </ng-container>
-
 </div>
+</div>
+
+
+<ng-template #withImage let-item>
+
+  <div   class="custom-control-indicator with-image " [ngClass]="{'selected': control.value === item.id}">
+    <div class="d-flex flex-column">
+      <div class="icon hr"></div>
+      <span class="desc">{{item.desc}}</span>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template #noImage let-item>
+
+<div   class="custom-control-indicator" [ngClass]="{'selected': control.value === item.id}">
+  <div class="icon hr"></div>
+  <span >{{item.desc}}</span>
+</div>
+
+</ng-template>

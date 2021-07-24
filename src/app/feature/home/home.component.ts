@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   public results: IResult[];
   public inputSearch = '';
   public dropdownCtrl: FormControl = new FormControl();
+  inputCtrl: FormControl = new FormControl();
   checkBocCtrl: FormControl = new FormControl();
   radioCtrl: FormControl = new FormControl();
   public dropdownItems: DropdownItem[] = [
