@@ -1,3 +1,14 @@
 {
-  "aa":"aaa"
+  "title":"Welcome!!",
+  "subtitle": "Tell us who you are and what you'd like to achieve, and we'll do our best to create an outstanding coaching experience for you",
+  "name": "Name",
+  "email": "Email",
+  "lastName": "Last Name",
+  "phoneNumber": "Phone number (optional)",
+  "language": "Language",
+  "location": "Location",
+  "years": "Years with the organization",
+  "division": "My division:",
+  "role": "My Role:",
+  "next": "Next"
 }

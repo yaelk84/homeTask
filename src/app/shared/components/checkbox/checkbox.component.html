@@ -1,0 +1,14 @@
+<div class="amdocs-form-checkbox {{customClass}}">
+  <label class="custom-control custom-checkbox" [attr.for]="elementId">
+    <input (change)="onChange()"
+           type="checkbox"
+           class="custom-control-input" [formControl]="control"
+           [id]="elementId"
+
+    >
+    <span class="custom-control-indicator d-flex align-items-center justify-content-center"></span>
+    <span class="custom-control-description d-flex align-items-center justify-content-center" [ngClass]="{'text-small-bold': control.value, 'text-small-normal': !control.value}">
+      <ng-content></ng-content>
+    </span>
+  </label>
+</div>

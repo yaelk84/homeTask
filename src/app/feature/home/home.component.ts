@@ -16,14 +16,17 @@ import {FormControl} from "@angular/forms";
 export class HomeComponent implements OnInit {
 
   public results: IResult[];
-  public inputSearch :string = '';
+  public inputSearch = '';
   public dropdownCtrl: FormControl = new FormControl();
+  checkBocCtrl: FormControl = new FormControl();
+  radioCtrl: FormControl = new FormControl();
   public dropdownItems: DropdownItem[] = [
     new DropdownItem(1, 'option-1'),
     new DropdownItem(2, 'option-2'),
     new DropdownItem(3, 'option-3'),
     new DropdownItem(4, 'option-4'),
   ];
+
 
 
   constructor(private  homeService: HomeService, private router: Router) { }

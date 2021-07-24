@@ -12,9 +12,10 @@ export class DropdownComponent implements OnInit {
   @Input() items: DropdownItem[] = [];
   @Input() control: FormControl;
   @Input() customClass: string;
+  @Input() label: string;
   readOnly: any;
   showValidationErrorText: void;
-  label: any;
+
   selectedValue: any;
   fullWith: any;
 
@@ -40,9 +41,12 @@ export class DropdownComponent implements OnInit {
   getErrorMsg() {
     
   }
-
+selectVal(){
+    this.selectedValue = this.control.value;
+}
   itemClick($event: MouseEvent, item: DropdownItem) {
-    
+    this.control.setValue(item.key);
+    this.selectVal();
   }
 }
 export class DropdownItem {

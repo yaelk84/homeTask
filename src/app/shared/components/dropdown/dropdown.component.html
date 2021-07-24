@@ -1,6 +1,6 @@
+<div>{{label}}</div>
+<div class="amdocs-dropdown btn-group {{customClass}}" dropdown  #dropdown="bs-dropdown" >
 
-<div class="amdocs-dropdown btn-group {{customClass}}" dropdown >
-  <label class="custom-input-label">{{label}}</label>
   <button dropdownToggle type="button"
           class="custom-input-field-control dropdown-toggle d-flex align-items-center justify-content-between"
           aria-controls="dropdown-basic"
@@ -13,27 +13,26 @@
 
   >
     <span class="selected-value" [ngClass]="{'placeholder': !control.value}">{{selectedValue}}</span>
-    <img class="caret" src="/assets/icons/arrow-down.svg">
+
   </button>
 
 
-  <div *ngIf="isInvalid() && showValidationErrorText" class="custom-input-field-error">
-    <img src="/assets/icons/error.svg">
+  <div  class="custom-input-field-error" *ngIf="false">
+
     <span class="text-small-normal">{{getErrorMsg()}}</span>
   </div>
   <ul *dropdownMenu class="dropdown-menu"
       [ngClass]="{'full-width': fullWith}"
       role="menu" aria-labelledby="button-basic">
-    <ng-container *ngFor="let item of items; let i = index" >
+
+  <ng-container *ngFor="let item of items; let i = index" >
       <li class="menu-item" role="menuitem" (click)="itemClick($event, item)">
         <a class="dropdown-item"
            [ngClass]="{'disabled': item.disabled, 'selected': item.key == control.value}"
            href="javascript:void(0)"
         >
-
-          <ng-container >
             {{item.value}}
-          </ng-container>
+
         </a>
       </li>
 

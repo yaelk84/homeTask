@@ -1,19 +1,40 @@
 
-<div class="container">
-  <div class="d-flex justify-content-center align-items-center flex-column search">
-    <button class="btn btn-link" (click)="goToBookmark()"> your bookmarks </button>
-    <h4 class="search-title"> search repositories</h4>
-    <div class="input-search-wrapper d-flex">
-      <input type="text" class="search-input" (keyup.enter)="goSearch()" [(ngModel)]="inputSearch"
-      >
-      <button  class="search-btn" (click)="goSearch()" [disabled]="!inputSearch"><i class="fa fa-search"></i></button>
+  <div class="container">
+    <div class="bg w-100" >
+      <div class="top-company-logo"></div>
+      <div class="header">
+        <h1 class="title">{{'title' | testTranslation}}</h1>
+        <h4 class="subtitle">{{'subtitle' | testTranslation}}</h4>
+      </div>
+      <form action="">
+        <section class="data">
+          <div class="d-flex justify-content-between flex-row" >
+            <div class="form-item"> <app-dropdown [items]="dropdownItems" [control]="dropdownCtrl"  [label]="'title' | testTranslation"> </app-dropdown></div>
+            <div class="form-item"> <app-dropdown [items]="dropdownItems" [control]="dropdownCtrl"  [label]="'title' | testTranslation"> </app-dropdown></div>
+            <div class="form-item"> <app-dropdown [items]="dropdownItems" [control]="dropdownCtrl"  [label]="'title' | testTranslation"> </app-dropdown></div>
 
+
+          </div>
+        </section>
+        <section class="division-role"></section>
+
+      </form>
+
+      <button></button>
     </div>
+
+
+
   </div>
-  <app-result-display [results]="results" (bookMarkCallback)="bookmarkResult($event)"></app-result-display>
 
-</div>
-<button class="my-bookmarks" (click)="goToBookmark()"></button>
-drop:
 
+
+
+<!--
 <app-dropdown [items]="dropdownItems" [control]="dropdownCtrl" > </app-dropdown>
+<app-checkbox [control]="checkBocCtrl"></app-checkbox>
+<app-radio [options]="[{id: 1, desc: 'test1'}, {id: 2, desc: 'test2'}]" [control]="radioCtrl" ></app-radio>
+-->
+
+
+

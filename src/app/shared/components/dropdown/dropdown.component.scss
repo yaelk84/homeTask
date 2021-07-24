@@ -1,0 +1,53 @@
+@import "~src/assets/scss/colors";
+
+.amdropdown {
+  width: 100%;
+  display: block;
+  .custom-input-field-control {
+    .selected-value {
+      max-width: calc(100a - 25px);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .dropdown-toggle {
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    &:after{
+      content: none;
+    }
+  }
+  .dropdown-menu {
+    margin: 0;
+    padding: 16px 0px;
+    border-radius: 8px;
+    &.full-width {
+      width: 100%;
+      .dropdown-item {
+        white-space: inherit;
+      }
+    }
+    li.menu-item {
+      cursor: pointer;
+      .dropdown-item {
+        margin: 0;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        border-bottom: $border 1px solid;
+        padding: 0 12px;
+        &.dropdown-sub-item{
+          padding-left: 25px;
+        }
+        &.selected, &:hover{
+          background-color: $gray1;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

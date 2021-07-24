@@ -1,0 +1,11 @@
+<div class="amdocs-form-radio {{customClass}}">
+
+  <ng-container *ngFor="let item of options">
+    <label class="container">
+      <span >{{item.desc}}</span>
+      <input class="hidden-input" type="radio"   [value]="item.id" [formControl]="control" (change)="onChange()">
+      <span class="custom-control-indicator" [ngClass]="{'selected': control.value === item.id}"></span>
+    </label>
+  </ng-container>
+
+</div>
