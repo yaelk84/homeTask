@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {UtilsService} from "../../../services/utils.service";
-import {IERROR} from "../../../models/model";
+import {FormControl} from '@angular/forms';
+import {UtilsService} from '../../../services/utils.service';
+import {IERROR} from '../../../models/model';
 
 @Component({
   selector: 'app-dropdown',
@@ -18,33 +18,12 @@ export class DropdownComponent implements OnInit {
   @Input() errors: IERROR;
 
   readOnly: any;
-  showValidationErrorText: void;
-
   selectedValue: any;
   fullWith: any;
 
   ngOnInit() {
   }
 
-  isInvalid() {
-    
-  }
-
-  isDisabled() {
-    
-  }
-
-  onFocus() {
-    
-  }
-
-  onBlur() {
-    
-  }
-
-  getErrorMsg() {
-    
-  }
 selectVal(){
     this.selectedValue = this.control.value;
 }
@@ -54,7 +33,7 @@ selectVal(){
   }
 
   getError() {
-    debugger
+
     return this.utils.getErrorMsg(this.control, this.errors);
   }
 }
@@ -62,7 +41,6 @@ export class DropdownItem {
   constructor(
     public key: any,
     public value: string,
-    public subDropDownItems?: DropdownItem[],
     public disabled: boolean = false,
   ) {
   }

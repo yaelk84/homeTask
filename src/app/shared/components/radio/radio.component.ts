@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {IERROR, IRadio} from "../../../models/model";
-import {UtilsService} from "../../../services/utils.service";
+import {FormControl} from '@angular/forms';
+import {IERROR, IRadio} from '../../../models/model';
+import {UtilsService} from '../../../services/utils.service';
 
 @Component({
   selector: 'app-radio',
@@ -30,3 +30,12 @@ export class RadioComponent implements OnInit {
   }
 }
 
+
+export class RadioItem {
+  constructor(
+    public id: any,
+    public desc: string
+
+  ) {
+  }
+}

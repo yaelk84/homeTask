@@ -8,11 +8,7 @@
             class="custom-input-field-control dropdown-toggle d-flex align-items-center justify-content-center"
             aria-controls="dropdown-basic"
             [class.active]="control.value"
-            [class.invalid]="isInvalid()"
-            [class.readonly]="readOnly"
-            [attr.disabled]="isDisabled()"
-            (focus)="onFocus()"
-            (blur)="onBlur()"
+
 
     >
       <span class="selected-value" [ngClass]="{'placeholder': !control.value}">{{selectedValue}}</span>

@@ -2,8 +2,9 @@ import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
-import { IRadio} from '../models/model';
+import {Idata, IRadio} from '../models/model';
 import {CONSTANTS} from '../constants';
+import {RadioItem} from "../shared/components/radio/radio.component";
 
 /*@Injectable({
   providedIn: 'root'
@@ -14,16 +15,26 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  public getDivisions(): Observable<IRadio[]> {
+  public getDivisions(): Observable<RadioItem[]> {
 
     return this.http.get('/assets/stub/division.json').pipe(
       mergeMap((response: { divisions: [] }) => {
-       const auto: IRadio[] = response.divisions.map((item: {img: string, text: string}) => {
-          return {id: item.img, desc: item.text};
+       const auto: RadioItem[] = response.divisions.map((item: {img: string, text: string}) => {
+          return  new RadioItem(item.img, item.text);
 
       });
        return of(auto);
       
+      })
+    );
+  }
+  public saveData(params: Idata): Observable<boolean> {
+// replace to get because of the stub
+    return this.http.get('/assets/stub/saveData.json').pipe(
+      mergeMap((response: { success: boolean}) => {
+
+        return of(response.success);
+
       })
     );
   }

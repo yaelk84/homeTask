@@ -1,38 +1,31 @@
 @import "~src/assets/scss/colors";
-.input-row{
-  margin-bottom: 20px;
-  &:last-child{
-    padding-top: 20px;
-    margin-bottom: 0px;
-  }
-  .years-value{
-    flex-basis: 66%;
-    margin: 0 7.5px;
-  }
-  .years-description{
-    flex-basis: 33%;
-    margin: 0 7.5px;
-  }
-
+.full-or-small{
+  position: absolute;
+  top:0 ;
+  right: 0;
+  background-color: $darkBg;
+  color: $white;
+  border-radius: 10px;
 }
-
-
-.form-item{
-
-
-  flex-basis: 33%;
-  margin: 0 7.5px;
+.top-company-logo{
+  margin-top: 40px;
+  font-size: 33px;
+  font-weight: 500;
+  img{
+    width: 33px;
+  }
 }
 .bg{
   .title{
     font-weight: 500;
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 30px;
+    color: $darkBg;
   }
   .subtitle{
     font-weight: 500;
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 16px;
     max-width: 684px;
     margin-bottom: 20px;
   }
@@ -66,6 +59,69 @@
         margin-top: 24px;
       }
     }
-margin-top: 15px;
+    margin-top: 15px;
   }
+  .input-row{
+    margin-bottom: 20px;
+    &:last-child{
+      padding-top: 20px;
+      margin-bottom: 0px;
+    }
+    .years-value{
+      flex-basis: 66%;
+      margin: 0 7.5px;
+    }
+    .years-description{
+      flex-basis: 33%;
+      margin: 0 7.5px;
+      font-size: 16px;
+    }
+
+  }
+
+
+  .form-item{
+
+
+    flex-basis: 33%;
+    margin: 0 7.5px;
+  }
+
+}
+
+.submit{
+
+  padding: 7px 33px;
+  border-radius: 4px;
+  background-color: $darkBg;
+  font-size: 16px;
+  font-weight: bold;
+  color: $white;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 767px) {
+.bg{
+  section{
+    &.division-role{
+
+      padding: 26px 15px;
+    }
+  }
+  label{
+    &.with-image{
+      margin: 0 0.5%;
+       flex: 0 0 23%;
+      max-width: 23%;
+    }
+
+  }
+  .input-row{
+    .years-value{
+      width: 100%;
+    }
+
+  }
+}
 }

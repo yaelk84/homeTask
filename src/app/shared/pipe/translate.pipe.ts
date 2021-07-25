@@ -15,8 +15,8 @@ export class TranslatePipe implements PipeTransform {
 
   }
 
-  transform(value: any, args?: any): any {
-    return this.translate.getText(value, args);
+  transform(value: any): any {
+    return this.translate.getText(value);
   }
 
 }

@@ -1,6 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~src/assets/scss/colors";
 @import "~src/assets/scss/input";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1200px,
+);
 @media only screen and (min-width : 1200px) {
   .container {
   &.small{

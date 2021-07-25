@@ -24,11 +24,10 @@ export class TranslateService {
     this.textTranslation = obj;
   }
 
-  getText(key: string, placeholdersReplace: any = []): string {
+  getText(key: string): string {
     if (!key) {
       return '';
     }
-debugger
     const value = key.split('.')
       .reduce((previous, current) => previous[current], this.textTranslation) || '';
 

@@ -1,3 +1,5 @@
+import {FormControl, Validators} from "@angular/forms";
+
 export interface IResult {
  repoName: string;
  repoAvatar: string
@@ -22,6 +24,18 @@ export interface IRadio {
 
 }
 export interface IERROR {
-  [key: string]: string
+  [key: string]: string;
 }
+export interface Idata {
+  lastName: string;
+  email: string;
+  location: string;
+  language: string;
+  phone: string;
+  years: string;
+  division: string;
+   role: string;
+
+}
+
 
