@@ -1,7 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~src/assets/scss/colors";
 @import "~src/assets/scss/input";
-
+@media only screen and (min-width : 1200px) {
+  .container {
+  &.small{
+    max-width: 768px;
+  }}
+}
 
 body{
   font-family: 'Heebo', sans-serif;

@@ -10,9 +10,10 @@ export interface IServerDataItem {
   }
 }
 
-export interface IUser {
-  name: string;
-  password:string;
+
+export interface IRadio {
+  id: string;
+  desc: string;
 }
   export enum IHttpType {
   post = 'post',
@@ -20,3 +21,7 @@ export interface IUser {
   get = 'get',
 
 }
+export interface IERROR {
+  [key: string]: string
+}
+

@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {UtilsService} from "../../../services/utils.service";
+import {IERROR} from "../../../models/model";
 
 @Component({
   selector: 'app-input-text',
@@ -12,9 +14,13 @@ export class InputTextComponent implements OnInit {
   @Input() control: FormControl;
   @Input() customClass: string;
   @Input() label: string;
-  constructor() { }
+  @Input() errors: IERROR;
+  constructor(private utils: UtilsService) { }
 
   ngOnInit() {
   }
 
+  getError() {
+    return this.utils.getErrorMsg(this.control, this.errors);
+  }
 }

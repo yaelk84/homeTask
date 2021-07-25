@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
-import {IResult, IServerDataItem} from '../../models/model';
+import {IRadio, IResult, IServerDataItem} from '../../models/model';
 import {ApiService} from '../../services/api.service';
 import {CONSTANTS} from '../../constants';
 import { NgModule } from '@angular/core';
@@ -15,17 +15,8 @@ export class HomeService {
   constructor(private apiService: ApiService) {
   }
 
-  public githubSearch(searchKeyWord: string): Observable<IResult[]> {
-    return this.apiService.githubSearch(searchKeyWord).pipe(
-      mergeMap((response: IServerDataItem[]) => {
-        const resultArray: IResult[] = [];
-        response.forEach((item: IServerDataItem)=>{
-          resultArray.push(this.convertServerItemToResultType(item));
-
-        })
-        return of(resultArray)
-      })
-    );
+  public getDivisions(): Observable<IRadio[]> {
+    return this.apiService.getDivisions();
   }
   public addToBookMark(result: IResult){
     const localStorageBookMarket: IResult[] = JSON.parse(localStorage.getItem(CONSTANTS.BOOKMARKS));

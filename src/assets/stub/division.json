@@ -1,35 +1,36 @@
 {
   "divisions": [{
-    "img": "R&D",
+    "img": "rnd",
     "text": "R&D"
   },
     {
-      "img": "GTM",
+      "img": "gtm",
       "text": "GTM"
     },
     {
-      "img": "Marketing",
+      "img": "marketing",
       "text": "Marketing"
     },
     {
-      "img": "Finance",
+      "img": "fianance",
       "text": "Finance"
+    },
     {
-      "img": "PRODUCT",
+      "img": "product",
       "text": "PRODUCT"
     },
     {
-      "img": "HR",
+      "img": "hr",
       "text": "HR"
     },
     {
-      "img": "Business",
+      "img": "bsiness",
       "text": "Business"
     },
     {
       "img": "Other",
       "text": "Other"
-    }		},
+    }
 
   ]
 }

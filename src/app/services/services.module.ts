@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {AppInitService} from './api.init';
 import {ApiService} from './api.service';
+import {UtilsService} from "./utils.service";
 
 @NgModule({
   declarations: [],
@@ -10,7 +11,9 @@ import {ApiService} from './api.service';
   ],
   providers:[
     ApiService,
-    AppInitService
+    AppInitService,
+    UtilsService
+
   ]
 })
 export class ServicesModule { }

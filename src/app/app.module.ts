@@ -5,8 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {ServicesModule} from './services/services.module';
-import {BsDropdownConfig, BsDropdownModule} from 'ngx-bootstrap/dropdown';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -22,8 +21,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
-    ServicesModule,
-    BsDropdownModule.forRoot()
+    ServicesModule
+
 
   ],
   providers: [],

@@ -28,9 +28,9 @@ import { InputTextComponent } from './components/input-text/input-text.component
   ],
   imports: [
     CommonModule,
-    BsDropdownModule,
+    BsDropdownModule.forRoot(),
     ReactiveFormsModule
-    ,
+
 
   ]
 })

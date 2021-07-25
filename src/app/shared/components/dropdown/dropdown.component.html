@@ -1,5 +1,7 @@
 <div class="dropdown-input">
   <div class="label-item">{{label}}</div>
+
+
   <div class="dropdown btn-group input-item {{customClass}}" dropdown  #dropdown="bs-dropdown" >
 
     <button dropdownToggle type="button"
@@ -18,9 +20,8 @@
     </button>
 
 
-    <div  class="custom-input-field-error" *ngIf="false">
-
-      <span class="text-small-normal">{{getErrorMsg()}}</span>
+    <div *ngIf="this.control.invalid && this.control.dirty;" class="error">
+      {{getError()}}
     </div>
     <ul *dropdownMenu class="dropdown-menu"
         [ngClass]="{'full-width': fullWith}"

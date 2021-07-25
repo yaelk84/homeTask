@@ -1,5 +1,5 @@
-<div class="amdocs-form-radio {{customClass}}">
-<div class="d-flex flex-row " [ngClass]="{'flex-wrap':withImageRadio,'justify-content-between':!withImageRadio}">
+<div class="form-radio {{customClass}}">
+<div class="d-flex flex-row " [ngClass]="{'flex-wrap':withImageRadio || true,'justify-content-between':!withImageRadio}">
   <ng-container *ngFor="let item of options">
 
 
@@ -10,17 +10,21 @@
     </label>
   </ng-container>
 </div>
+  <div *ngIf="this.control.invalid && this.control.dirty;" class="error">
+    {{getError()}}
+  </div>
 </div>
 
 
 <ng-template #withImage let-item>
-
   <div   class="custom-control-indicator with-image " [ngClass]="{'selected': control.value === item.id}">
-    <div class="d-flex flex-column">
-      <div class="icon hr"></div>
+    <div class="d-flex flex-column align-items-center">
+      <div class="icon" [ngClass]="item.id">
+        <img [hidden]="control.value === item.id" [src]="'/assets/images/'+item.id+'.svg'" alt="">
+        <img [hidden]="control.value !== item.id" [src]="'/assets/images/'+item.id+'O.svg'" alt="">
+      </div>
       <span class="desc">{{item.desc}}</span>
     </div>
-
   </div>
 </ng-template>
 <ng-template #noImage let-item>
