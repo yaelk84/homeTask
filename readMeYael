@@ -1,4 +1,0 @@
-i didnt do the server side 
-instead  of store the bookmark result in asp.net i store it in localstorge
-i did the jwt logic just for demonstration , in the client in file api.service
-  with stub that return the token, and use apiWrapper function to add the token to the header of all http request
