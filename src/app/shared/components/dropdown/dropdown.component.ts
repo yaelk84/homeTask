@@ -17,7 +17,7 @@ export class DropdownComponent implements OnInit {
   @Input() label: string;
   @Input() errors: IERROR;
 
-  readOnly: any;
+
   selectedValue: any;
   fullWith: any;
 

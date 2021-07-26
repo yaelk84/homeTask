@@ -1,14 +1,10 @@
-import {Injectable} from '@angular/core';
+
 import {Observable, of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
-import {Idata, IRadio} from '../models/model';
-import {CONSTANTS} from '../constants';
+import {Idata} from '../models/model';
 import {RadioItem} from "../shared/components/radio/radio.component";
 
-/*@Injectable({
-  providedIn: 'root'
-})*/
 export class ApiService {
 
 

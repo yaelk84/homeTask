@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {finalize} from 'rxjs/operators';
 import {HomeService} from './home.service';
-import {IERROR, IRadio, IResult} from '../../models/model';
+import {IERROR} from '../../models/model';
 import {DropdownItem} from '../../shared/components/dropdown/dropdown.component';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UtilsService} from '../../services/utils.service';
-import {RadioItem} from "../../shared/components/radio/radio.component";
+import {RadioItem} from '../../shared/components/radio/radio.component';
 
 @Component({
   selector: 'app-home',
@@ -70,7 +70,7 @@ public dataWasLoad = false;
   submit() {
 
     this.utils.markAllDirty(this.formData);
-    if(this.formData.valid){
+    if (this.formData.valid){
       this.homeService.submit(this.formData.value).subscribe(data => {console.log('succesee'); });
 
 

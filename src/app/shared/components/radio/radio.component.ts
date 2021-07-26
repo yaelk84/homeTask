@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {IERROR, IRadio} from '../../../models/model';
+import {IERROR} from '../../../models/model';
 import {UtilsService} from '../../../services/utils.service';
 
 @Component({
@@ -11,7 +11,7 @@ import {UtilsService} from '../../../services/utils.service';
 export class RadioComponent implements OnInit {
 
   constructor(private utils: UtilsService) { }
-  @Input() options: IRadio[] = [];
+  @Input() options: RadioItem[] = [];
   @Input() control: FormControl;
   @Input() customClass: string;
   @Input() withImageRadio = false;
