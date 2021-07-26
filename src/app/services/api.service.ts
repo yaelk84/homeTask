@@ -26,6 +26,7 @@ export class ApiService {
   }
   public saveData(params: Idata): Observable<boolean> {
 // replace to get because of the stub
+    console.log('params', params)
     return this.http.get('/assets/stub/saveData.json').pipe(
       mergeMap((response: { success: boolean}) => {
 
