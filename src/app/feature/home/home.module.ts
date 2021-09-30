@@ -5,11 +5,12 @@ import {HomeRoutingModule} from './home-routing.module';
 import {HomeService} from './home.service';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../../shared/shared.module";
+import {LengthConverterComponent} from "../length-converter/length-converter.component";
 
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, LengthConverterComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

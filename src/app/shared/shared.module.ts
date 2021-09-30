@@ -7,19 +7,23 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RadioComponent } from './components/radio/radio.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
+import { DroppableDirective } from './droppable.directive';
+import { DraggableDirective } from './draggable.directive';
 
 
 
 
 
 @NgModule({
-  declarations: [TranslatePipe, DropdownComponent, CheckboxComponent, RadioComponent, InputTextComponent],
+  declarations: [TranslatePipe, DropdownComponent, CheckboxComponent, RadioComponent, InputTextComponent, DroppableDirective, DraggableDirective],
   exports: [
         DropdownComponent,
     CheckboxComponent,
     RadioComponent,
     TranslatePipe,
-    InputTextComponent
+    InputTextComponent,
+    DroppableDirective,
+    DraggableDirective
 
 
   ],

@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {ServicesModule} from './services/services.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +20,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     SharedModule,
     ServicesModule
+
 
 
   ],

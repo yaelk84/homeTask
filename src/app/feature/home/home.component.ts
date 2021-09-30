@@ -33,12 +33,40 @@ public dataWasLoad = false;
 
   ];
   public formData: FormGroup;
+  hero = {aa:0,bb:2};
+  counter = 0;
+  private aa: string;
 
 
   constructor(private  homeService: HomeService, private utils: UtilsService) {
   }
 
+  // tslint:disable-next-line:prefer-const
+/*  c = {
+    name: '',
+     log: function() {
+
+
+      this.name = 'updste';
+      console.log('inseide', this);
+      let setName = (x) => {
+        this.name = x;
+      }
+      setName('update agin');
+      console.log(this);
+          
+    }
+  }
+  
+  
+  tryThis(){
+    console.log(this);
+  }*/
+
+  
+  
   ngOnInit() {
+
     this.homeService.getDivisions().pipe(
       finalize(() => {
     this.dataWasLoad = true;
@@ -78,4 +106,10 @@ public dataWasLoad = false;
   }
 
 
+  hangeHero() {
+    this.hero.aa = this.counter;
+    this.hero = {...this.hero}
+    this.counter++;
+
+  }
 }

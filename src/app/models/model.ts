@@ -17,3 +17,8 @@ export interface Idata {
 }
 
 
+export interface Option {
+  id: number;
+  label:string;
+  unit:string;
+}

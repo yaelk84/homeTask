@@ -1,0 +1,19 @@
+
+.square{
+  stroke-dasharray: 650;
+  stroke-dashoffset: -650;
+  animation: draw-square 1s infinite;
+
+
+}
+@keyframes draw-square {
+  from{
+    stroke-dashoffset: -650
+  }
+  to{
+    stroke-dashoffset: 650
+  }
+}
+
+
+
